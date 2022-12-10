@@ -1,16 +1,16 @@
 {
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true,
     "go.toolsManagement.autoUpdate": true,
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "editor.rulers": [120],
     "editor.minimap.enabled": false,
-    "terminal.integrated.gpuAcceleration": "off",
-    "svelte.enable-ts-plugin": true,
-    "editor.maxTokenizationLineLength": 40000,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "FiraCode NF",
-    "svelte.plugin.svelte.note-new-transformation": false,
-    "npm.keybindingsChangedWarningShown": true,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "explorer.confirmDelete": false,
+    "gopls": {
+        "ui.semanticTokens": true,
+    },
+   "go.buildTags": "pipelineOne,pipelineTwo",
     "vim.normalModeKeyBindings": [
         // open file selector
         {
@@ -52,6 +52,30 @@
             "before": ["C-j"],
             "commands": ["workbench.action.navigateDown"]
         },
+        // definitions, references
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["<leader>", "g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["<leader>", "g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["<leader>", "d"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        // terminal
+        {
+            "before": ["<leader>", "t", "t"],
+            "commands": ["workbench.action.terminal.new"]
+        }
     ],
-    "vim.leader": ","
+    "vim.leader": ",",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.startupEditor": "none"
 }
