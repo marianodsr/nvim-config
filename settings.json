@@ -3,7 +3,7 @@
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "editor.rulers": [120],
     "editor.minimap.enabled": false,
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "explorer.confirmDelete": false,
@@ -16,6 +16,10 @@
         {
             "before": ["<leader>", "f"],
             "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"]
         },
         // open sidebar
         {
@@ -30,6 +34,10 @@
         {
             "before": ["t", "h"],
             "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["t", "w"],
+            "commands": ["workbench.action.closeActiveEditor"]
         },
         // move between panes
         {
@@ -75,7 +83,17 @@
             "commands": ["workbench.action.terminal.new"]
         }
     ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["<leader>", "c"],
+          "commands": ["editor.action.commentLine"],
+          "when": "editorTextFocus && !editorReadonly"
+        }
+      ],
     "vim.leader": ",",
     "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
