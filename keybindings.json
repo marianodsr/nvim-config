@@ -1,0 +1,166 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+g r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+b shift+5",
+        "command": "workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.files.openLocalFileFolder",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openLocalFileFolder",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "false"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.files.openFolderViaWorkspace",
+        "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFolderViaWorkspace",
+        "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.files.openFileFolder",
+        "when": "isMacNative && openFolderWorkspaceSupport"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFileFolder",
+        "when": "isMacNative && openFolderWorkspaceSupport"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-acceptAlternativeSelectedSuggestion",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-insertPrevSuggestion",
+        "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-jumpToPrevSnippetPlaceholder",
+        "when": "editorTextFocus && hasPrevTabstop && inSnippetMode"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-outdent",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+up",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+]
